@@ -1,79 +1,91 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
+:root {
+    --primary-color: #52499D;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: 'Mooli', sans-serif;
+}
 
 body {
-    font-family: 'Times New Roman', serif;
-    font-size: 20px;
-    line-height: 1.5;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 20px;
-    transition: background-color 0.5s, color 0.5s;
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+    color: var(--text-dark);
 }
 
+a:link, a:visited {
+    color: var(--accent-color);
+}
 
 header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
     text-align: center;
-    margin-bottom: 40px;
+    padding: 10px;
 }
 
-header h1 {
-    font-size: 36px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 10px;
 }
 
-header h2 {
-    font-size: 24px;
-    color: #006EB6;
-    margin-top: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    object-fit: cover;
 }
 
-main {
-    display: flex;
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
     justify-content: center;
 }
 
-section {
-    max-width: 600px;
-    width: 100%;
+nav ul.show {
+    display: flex;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-light);
+}
+
+#menu-button {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+    max-width: 750px;
     margin: 0 auto;
-    padding: 20px;
 }
 
-ul {
-    margin-left: 20px;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-
-footer {
-    text-align: center;
-    margin-top: 40px;
-}
-
-#logo {
-    width: 150px;
-    display: block;
-    margin: 0 auto;
-}
-
-
-.dark {
-    background-color: #333;
-    color: #fff;
-}
-
-.dark h2 {
-    color: #87CEEB; /* A lighter blue for better contrast */
+.gallery figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 250px;
 }
 
